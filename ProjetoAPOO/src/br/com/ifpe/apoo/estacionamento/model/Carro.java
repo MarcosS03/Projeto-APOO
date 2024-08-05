@@ -2,6 +2,9 @@ package br.com.ifpe.apoo.estacionamento.model;
 
 import java.time.LocalDateTime;
 
+import br.com.ifpe.apoo.estacionamento.controller.TipoPagamento;
+
+
 
 public class Carro extends Veiculo{
 
@@ -21,7 +24,8 @@ public class Carro extends Veiculo{
 				+ "\nModelo: " + this.modelo
 				+ "\nAno: " + this.anoFabricacao
 				+ "\nPlaca: " + this.placa
-				+ "\nProprietario: " + this.proprietario;
+				+ "\nProprietario: " + this.proprietario
+				+ "\nHoraEntrada: "+ this.getHoraEntrada();
 	}
 	
 	

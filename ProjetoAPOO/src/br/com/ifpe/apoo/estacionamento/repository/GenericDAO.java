@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import br.com.ifpe.apoo.estacionamento.controller.CadastrarVeiculo;
+import br.com.ifpe.apoo.estacionamento.apresentação.DadosVeiculo;
 import br.com.ifpe.apoo.estacionamento.model.Veiculo;
 
 
@@ -17,7 +17,7 @@ public class GenericDAO <T extends Veiculo> implements IGenericDAO<T> {
 	List<T>dados = new ArrayList<T>();
 	
 
-	int vagasDisponivel = 10;
+	
 
 
 	private static GenericDAO singleton = null;
@@ -34,20 +34,11 @@ public class GenericDAO <T extends Veiculo> implements IGenericDAO<T> {
 		return singleton;
 	}
 
-	public boolean vagaDisponivel() {
-
-		if (this.dados == null || this.dados.size() < vagasDisponivel) {
-			return true;
-		}
-		return false;
-	}
 
 	@Override
-	public void add(T dados) {
-		if (vagaDisponivel() == true) {
-			this.dados.add(dados);
-		}
-//		System.out.println("Estacionamento sem vagas!!");		
+	public void add(T dados) {		
+			this.dados.add(dados);	
+		
 	}
 
 	@Override
@@ -64,21 +55,21 @@ public class GenericDAO <T extends Veiculo> implements IGenericDAO<T> {
 	@Override
 	public void update(T veiculo) {
 		
-		CadastrarVeiculo cadastro = new CadastrarVeiculo();
+		DadosVeiculo cadastro = new DadosVeiculo();
 		
-		var veiculoAtual = cadastro.cadastrarVeiculo();
-		
-		
-		for (T v : dados) {
-			if (v.getPlaca().equals(veiculo.getPlaca())) {				
-				v.setMarca(veiculoAtual.getMarca());
-				v.setModelo(veiculoAtual.getModelo());
-				v.setAnoFabricacao(veiculoAtual.getAnoFabricacao());
-				v.setPlaca(veiculoAtual.getPlaca());
-				
-				
-			}
-		}
+//		var veiculoAtual = cadastro.dadosVeiculo();
+//		
+//		
+//		for (T v : dados) {
+//			if (v.getPlaca().equals(veiculo.getPlaca())) {				
+//				v.setMarca(veiculoAtual.getMarca());
+//				v.setModelo(veiculoAtual.getModelo());
+//				v.setAnoFabricacao(veiculoAtual.getAnoFabricacao());
+//				v.setPlaca(veiculoAtual.getPlaca());
+//				
+//				
+//			}
+//		}
 
 	}
 
@@ -91,6 +82,12 @@ public class GenericDAO <T extends Veiculo> implements IGenericDAO<T> {
 	
 
 	}
+
+	public List<T> getDados() {
+		return dados;
+	}
+	
+	
 
 
 

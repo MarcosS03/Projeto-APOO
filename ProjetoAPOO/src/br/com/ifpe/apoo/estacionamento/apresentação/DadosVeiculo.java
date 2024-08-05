@@ -1,19 +1,30 @@
-package br.com.ifpe.apoo.estacionamento.controller;
+package br.com.ifpe.apoo.estacionamento.apresentação;
+
 
 import java.util.Scanner;
-
-import br.com.ifpe.apoo.estacionamento.model.Carro;
-import br.com.ifpe.apoo.estacionamento.model.Moto;
 import br.com.ifpe.apoo.estacionamento.model.Veiculo;
 
-public class CadastrarVeiculo {
+public class DadosVeiculo {
+	
+	Veiculo veiculo;
+	
+	String proprietario;
+	String marca;
+	String modelo;
+	String placa;
+	int anoFabricacao;
+	
+	int tipoVeiculo;
 
 
-	public Veiculo cadastrarVeiculo() {
+	Scanner sc = new Scanner(System.in);
 
-		Veiculo veiculo = null;
+	
+	
+	
+	public void cadastrarVeiculo() {
 
-		Scanner sc = new Scanner(System.in);
+
 		System.out.println("""
 
 				Por favor, escolha o numero de acordo com o tipo do seu veiculo!
@@ -21,78 +32,102 @@ public class CadastrarVeiculo {
 				1 - Moto
 				2 - Carro
 				""");
-		int tipoVeiculo = sc.nextInt();
+		this.tipoVeiculo = Integer.parseInt( sc.nextLine());
 
 
 
-		switch (tipoVeiculo) {
-
-		case 1: {
-
-			System.out.println("Informe o seu nome: ");
-			var proprietario = sc.nextLine();				
-
-			System.out.println("Informe a marca do veiculo: ");
-			var marca = sc.nextLine();
-
-			System.out.println("Informe o modelo do veiculo: ");
-			var modelo = sc.nextLine();
-
-			System.out.println("Informe o ano do veiculo: ");
-			var ano = sc.nextInt();
-
-			System.out.println("Informe a placa do veiculo: ");
-			var placa = sc.nextLine();
+			this.dadosVeiculo();
 
 
-
-			Moto moto = new Moto.MotoBuilder()
-					.marca(marca)
-					.modelo(modelo)
-					.anoFabricacao(ano)
-					.proprietario(proprietario)
-					.placa(placa)
-					.build();
-
-
-			veiculo = moto;
-			break;
-
-		}
-
-		case 2: {
-			System.out.println("Informe o seu nome: ");
-			var proprietario = sc.nextLine();				
-
-			System.out.println("Informe a marca do veiculo: ");
-			var marca = sc.nextLine();
-
-			System.out.println("Informe o modelo do veiculo: ");
-			var modelo = sc.nextLine();
-
-			System.out.println("Informe o ano do veiculo: ");
-			var ano = sc.nextInt();
-
-			System.out.println("Informe a placa do veiculo: ");
-			var placa = sc.nextLine();
-
-
-
-			Carro carro = new Carro.CarroBuilder()
-					.marca(marca)
-					.modelo(modelo)
-					.anoFabricacao(ano)
-					.proprietario(proprietario)
-					.placa(placa)
-					.build();
-
-			veiculo = carro;
-			break;
-
-		}
-
-		}
-		return veiculo;
+	
 	}
+	
+	
+	public void dadosVeiculo(){
+
+
+
+		System.out.println("Informe o seu nome: ");
+		this.proprietario = sc.nextLine();		
+
+		System.out.println("Informe a marca do veiculo: ");
+		this.marca = sc.nextLine();
+
+		System.out.println("Informe o modelo do veiculo: ");
+		this.modelo = sc.nextLine();
+
+		System.out.println("Informe o ano do veiculo: ");
+		var anoString = sc.nextLine();
+		this.anoFabricacao = Integer.parseInt(anoString);
+
+		System.out.println("Informe a placa do veiculo: ");
+		this.placa = sc.nextLine();
+	
+	}
+	
+	
+	
+	
+
+	
+	public int getTipoVeiculo() {
+		return tipoVeiculo;
+	}
+	public void setTipoVeiculo(int tipoVeiculo) {
+		this.tipoVeiculo = tipoVeiculo;
+	}
+
+
+	public String getProprietario() {
+		return proprietario;
+	}
+
+
+	public void setProprietario(String proprietario) {
+		this.proprietario = proprietario;
+	}
+
+
+	public String getMarca() {
+		return marca;
+	}
+
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+
+	public String getModelo() {
+		return modelo;
+	}
+
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
+
+	public String getPlaca() {
+		return placa;
+	}
+
+
+	public void setPlaca(String placa) {
+		this.placa = placa;
+	}
+
+
+	public int getAnoFabricacao() {
+		return anoFabricacao;
+	}
+
+
+	public void setAnoFabricacao(int anoFabricacao) {
+		this.anoFabricacao = anoFabricacao;
+	}
+	
+	
+	
 
 }

@@ -1,11 +1,14 @@
-package br.com.ifpe.apoo.estacionamento.financeiro;
+package br.com.ifpe.apoo.estacionamento.model.financeiro;
 
-public class Pagamento implements ItaxaExtra{
+public class Pagamento implements IPagamento{
+	
 
+	
 	@Override
 	public double taxa() {
-		// TODO Auto-generated method stub
-		return 0;
+		double valor;
+		return  valor = 6.00;
+		
 	}
-
+	
 }

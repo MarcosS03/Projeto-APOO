@@ -1,6 +1,6 @@
-package br.com.ifpe.apoo.estacionamento.financeiro;
+package br.com.ifpe.apoo.estacionamento.model.financeiro;
 
-public interface ItaxaExtra {
+public interface IPagamento {
 	
 	double taxa();
 

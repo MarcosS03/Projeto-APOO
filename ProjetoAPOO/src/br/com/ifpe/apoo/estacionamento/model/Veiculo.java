@@ -3,6 +3,9 @@ package br.com.ifpe.apoo.estacionamento.model;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
+import br.com.ifpe.apoo.estacionamento.controller.TipoPagamento;
+import br.com.ifpe.apoo.estacionamento.model.financeiro.PagamentoDecorator;
+
 
 
 public class Veiculo extends Base{
@@ -16,15 +19,10 @@ public class Veiculo extends Base{
 	private LocalDateTime horaSaida;
 	
 	
+	
 
 
-
-	public String getMarca() {
-		return marca;
-	}
-
-
-
+	
 	public Veiculo(String marca, String modelo, int anoFabricacao, String placa, String proprietario,
 			LocalDateTime horaEntrada, LocalDateTime horaSaida) {
 		super();
@@ -35,8 +33,12 @@ public class Veiculo extends Base{
 		this.proprietario = proprietario;
 		this.horaEntrada = horaEntrada.now().truncatedTo(ChronoUnit.MINUTES);
 		this.horaSaida = horaSaida.now().truncatedTo(ChronoUnit.MINUTES);
+		
 	}
 
+	public String getMarca() {
+		return marca;
+	}
 
 
 	public void setMarca(String marca) {
@@ -114,6 +116,6 @@ public class Veiculo extends Base{
 	public void setHoraSaida(LocalDateTime horaSaida) {
 		this.horaSaida = horaSaida;
 	}
-		
+	
 
 }

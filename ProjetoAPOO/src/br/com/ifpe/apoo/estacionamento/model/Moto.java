@@ -2,6 +2,9 @@ package br.com.ifpe.apoo.estacionamento.model;
 
 import java.time.LocalDateTime;
 
+import br.com.ifpe.apoo.estacionamento.controller.TipoPagamento;
+
+
 public class Moto extends Veiculo {
 
 
@@ -37,6 +40,7 @@ public class Moto extends Veiculo {
 		private String proprietario;
 		private LocalDateTime horaEntrada;
 		private LocalDateTime horaSaida;
+		
 
 
 		@Override
@@ -78,7 +82,7 @@ public class Moto extends Veiculo {
 			this.horaSaida = horaSaida;
 			return this;
 		}
-
+		
 		public Moto build() {
 			return new Moto(marca, modelo, anoFabricacao, placa, proprietario, horaEntrada, horaSaida);
 

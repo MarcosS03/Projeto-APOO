@@ -7,21 +7,18 @@ import br.com.ifpe.apoo.estacionamento.model.Moto;
 import br.com.ifpe.apoo.estacionamento.model.Veiculo;
 
 
-public class ControllerMoto {
+public class ControllerMoto extends Controller {
 
-
-	DadosVeiculo dadosV = new DadosVeiculo();
 
 	private LocalDateTime ano = LocalDateTime.now();
 
 
 
 
-
-	public boolean validarAnoVeiculo() {
+	public boolean validarAnoVeiculo(Veiculo veiculo) {
 		int anoAtual = ano.getYear();
 
-		if (dadosV.getAnoFabricacao() >= anoAtual - 20 ) {
+		if (veiculo.getAnoFabricacao() >= anoAtual - 20 ) {
 			return true;
 
 		}else {
@@ -31,23 +28,5 @@ public class ControllerMoto {
 
 	}
 
-
-
-	int opcaoVeiculo =  dadosV.getTipoVeiculo();
-
-	public Veiculo cadastrarVeiculo() {
-		Veiculo veiculo;
-					
-			Moto moto = new Moto.MotoBuilder()
-					.marca(dadosV.getMarca())
-					.modelo(dadosV.getModelo())
-					.anoFabricacao(dadosV.getAnoFabricacao())
-					.proprietario(dadosV.getProprietario())
-					.placa(dadosV.getPlaca())
-					.build();
-
-		
-		return veiculo = moto;
-	}
 
 }

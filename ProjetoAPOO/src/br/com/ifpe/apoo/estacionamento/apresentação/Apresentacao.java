@@ -5,6 +5,7 @@ package br.com.ifpe.apoo.estacionamento.apresentação;
 import java.util.Scanner;
 
 import br.com.ifpe.apoo.estacionamento.controller.Controller;
+import br.com.ifpe.apoo.estacionamento.controller.ControllerMoto;
 import br.com.ifpe.apoo.estacionamento.controller.TipoPagamento;
 import br.com.ifpe.apoo.estacionamento.model.Carro;
 import br.com.ifpe.apoo.estacionamento.model.Moto;
@@ -18,7 +19,8 @@ public class Apresentacao {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		Controller controle = new Controller();
+		ControllerMoto controle = new ControllerMoto(); //aqui aplicar o padrão AbstractFactoey para acessar o controller
+		
 
 
 		while (true) {
@@ -34,7 +36,8 @@ public class Apresentacao {
 					5 - Finalizar atendimento
 
 					""");
-			var escolha = sc.nextInt();
+			var valor = sc.nextLine();
+			var escolha = Integer.parseInt(valor);
 
 
 			if (escolha >= 5) {
@@ -45,9 +48,36 @@ public class Apresentacao {
 			switch (escolha) {
 			case 1: {
 
-				controle.estacionar();
-				break;
+				DadosVeiculo dadosV = new DadosVeiculo();
+				dadosV.cadastrarVeiculo();
 
+				int opcaoVeiculo =  dadosV.getTipoVeiculo();
+				
+				
+				if (opcaoVeiculo == 1) {
+
+					Moto moto = new Moto.MotoBuilder()
+							.marca(dadosV.getMarca())
+							.modelo(dadosV.getModelo())
+							.anoFabricacao(dadosV.getAnoFabricacao())
+							.proprietario(dadosV.getProprietario())
+							.placa(dadosV.getPlaca())
+							.build();
+
+					controle.estacionar(moto);
+					break;
+				}else if (opcaoVeiculo == 2) {
+					Carro  carro = new Carro.CarroBuilder()
+							.marca(dadosV.getMarca())
+							.modelo(dadosV.getModelo())
+							.anoFabricacao(dadosV.getAnoFabricacao())
+							.proprietario(dadosV.getProprietario())
+							.placa(dadosV.getPlaca())
+							.build();
+
+					controle.estacionar(carro);
+					break;
+				}
 
 			}
 			case 2: {
@@ -57,6 +87,7 @@ public class Apresentacao {
 
 				var consulta = controle.Consultar(placa);
 				System.out.println(consulta);
+				break;
 
 
 			}
@@ -64,9 +95,7 @@ public class Apresentacao {
 				System.out.println("Informe a placa do seu veiculo!");
 				var placa = sc.nextLine();
 
-
 				System.out.println("informe os dados do seu veículo");
-
 
 				controle.Atualizar(placa);
 

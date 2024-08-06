@@ -7,7 +7,7 @@ public interface IController <T> {
 	
 	
 	
-	public void estacionar();
+	public void estacionar(Veiculo veiculo);
 	
 	public Veiculo Consultar(String placa);
 	

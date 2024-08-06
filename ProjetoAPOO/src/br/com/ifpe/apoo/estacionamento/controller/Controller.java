@@ -18,25 +18,25 @@ public class Controller extends ControllerGeneric<Veiculo>{
 
 	int opcaoVeiculo;
 
-		public Long ValorAPagar(String placa) {
-	
+	/*	public Long ValorAPagar(String placa) {
+
 			var veiculo = repository.consult(placa);
 			LocalDateTime horaEnt = veiculo.getHoraEntrada();
 			LocalDateTime horaSai = LocalDateTime.now();
-	
-	
+
+
 			Duration tempo =  Duration.between(horaEnt, horaSai);
-	
+
 			long tempoEstacionado = tempo.toHours();
 			long minutosRestantes = tempo.toMinutesPart();
-	
+
 			return tempoEstacionado + minutosRestantes;		
-	
-		}
+
+		}*/
 
 
 	public Veiculo cadastrarVeiculo() {
-		Veiculo veiculo;
+
 		DadosVeiculo dadosV = new DadosVeiculo();
 		dadosV.cadastrarVeiculo();
 
@@ -48,17 +48,13 @@ public class Controller extends ControllerGeneric<Veiculo>{
 		case 1: {
 
 			ControllerMoto moto  = new ControllerMoto();
-
-
-
-			return veiculo = moto.cadastrarVeiculo();
-
-
+			return moto.cadastrarVeiculo();
+		
 		}
 		case 2: {
 
 			ControllerCarro carro  = new ControllerCarro();
-			carro.cadastrarVeiculo();
+			return carro.cadastrarVeiculo();
 		}
 
 		default:
@@ -68,26 +64,19 @@ public class Controller extends ControllerGeneric<Veiculo>{
 	}
 
 
-	public boolean validarAnoVeiculo() {
-		DadosVeiculo dadosV = new DadosVeiculo();
-
-
-		LocalDateTime ano = LocalDateTime.now();
-		int anoAtual = ano.getYear();
-
-		
+	public boolean validarAnoVeiculo(Veiculo veiculo) {
 
 
 		switch (opcaoVeiculo) {
 
 		case 1: {
 			ControllerMoto moto  = new ControllerMoto();
-			moto.validarAnoVeiculo();
+			return moto.validarAnoVeiculo(veiculo);
 		}
 		case 2: {
 
 			ControllerCarro carro  = new ControllerCarro();
-			carro.validarAnoVeiculo();
+			return carro.validarAnoVeiculo(veiculo);
 		}
 
 		default:

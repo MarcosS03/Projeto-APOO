@@ -4,9 +4,10 @@ import java.time.LocalDateTime;
 
 import br.com.ifpe.apoo.estacionamento.apresentação.DadosVeiculo;
 import br.com.ifpe.apoo.estacionamento.model.Carro;
+import br.com.ifpe.apoo.estacionamento.model.Veiculo;
 
 
-public class ControllerCarro {
+public class ControllerCarro extends Controller{
 
 	DadosVeiculo dadosV = new DadosVeiculo();
 
@@ -29,23 +30,4 @@ public class ControllerCarro {
 
 	}
 
-
-
-	int opcaoVeiculo =  dadosV.getTipoVeiculo();
-
-	
-	
-	public void cadastrarVeiculo() {
-		if (opcaoVeiculo == 1) {
-			
-			Carro Carro = new Carro.CarroBuilder()
-					.marca(dadosV.getMarca())
-					.modelo(dadosV.getModelo())
-					.anoFabricacao(dadosV.getAnoFabricacao())
-					.proprietario(dadosV.getProprietario())
-					.placa(dadosV.getPlaca())
-					.build();
-
-		}
-	}
 }

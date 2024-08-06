@@ -1,7 +1,9 @@
 package br.com.ifpe.apoo.estacionamento.controller;
 
 
-import br.com.ifpe.apoo.estacionamento.apresentação.DadosVeiculo;
+import java.time.Duration;
+import java.time.LocalDateTime;
+
 import br.com.ifpe.apoo.estacionamento.model.Veiculo;
 import br.com.ifpe.apoo.estacionamento.repository.GenericDAO;
 
@@ -17,19 +19,13 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 	
 
 	@Override
-	public final void estacionar() {
+	public final void estacionar(Veiculo veiculo) {
 		
 		
-		this.cadastrarVeiculo();
-		this.validarAnoVeiculo();
+		this.validarAnoVeiculo(veiculo);
 		
 		
-
-		DadosVeiculo dadosV = new DadosVeiculo();
-
-		Veiculo veiculo = this.cadastrarVeiculo();
-
-		if (vagaDisponivel() == true && this.validarAnoVeiculo() == true) {
+		if (vagaDisponivel() == true && this.validarAnoVeiculo(veiculo) == true) {
 			repository.add(veiculo);
 
 
@@ -53,8 +49,18 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 
 	@Override
 	public final Long ValorAPagar(String placa) {
-		// TODO Auto-generated method stub
-		return null;
+		var veiculo = repository.consult(placa);
+		LocalDateTime horaEnt = veiculo.getHoraEntrada();
+		LocalDateTime horaSai = LocalDateTime.now();
+
+
+		Duration tempo =  Duration.between(horaEnt, horaSai);
+
+		long tempoEstacionado = tempo.toHours();
+		long minutosRestantes = tempo.toMinutesPart();
+
+		return tempoEstacionado + minutosRestantes;		
+
 	}
 	
 	
@@ -67,7 +73,7 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 	}
 	
 	
-	public abstract boolean validarAnoVeiculo();
+	public abstract boolean validarAnoVeiculo(Veiculo veiculo);
 	
 	
 	public abstract Veiculo cadastrarVeiculo();

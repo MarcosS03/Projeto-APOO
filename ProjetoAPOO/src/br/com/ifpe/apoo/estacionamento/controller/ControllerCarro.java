@@ -9,7 +9,7 @@ import br.com.ifpe.apoo.estacionamento.model.Veiculo;
 
 public class ControllerCarro extends Controller{
 
-	DadosVeiculo dadosV = new DadosVeiculo();
+	
 
 	private LocalDateTime ano =  LocalDateTime.now();
 
@@ -17,10 +17,10 @@ public class ControllerCarro extends Controller{
 
 
 
-	public boolean validarAnoVeiculo() {
+	public boolean validarAnoVeiculo(Veiculo veiculo) {
 		int anoAtual = ano.getYear();
 
-		if (dadosV.getAnoFabricacao() >= anoAtual - 10 ) {
+		if (veiculo.getAnoFabricacao() >= anoAtual - 20 ) {
 			return true;
 
 		}else {

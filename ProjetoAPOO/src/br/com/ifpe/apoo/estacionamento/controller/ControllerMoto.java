@@ -18,7 +18,7 @@ public class ControllerMoto extends Controller {
 	public boolean validarAnoVeiculo(Veiculo veiculo) {
 		int anoAtual = ano.getYear();
 
-		if (veiculo.getAnoFabricacao() >= anoAtual - 20 ) {
+		if (veiculo.getAnoFabricacao() >= anoAtual - 10 ) {
 			return true;
 
 		}else {

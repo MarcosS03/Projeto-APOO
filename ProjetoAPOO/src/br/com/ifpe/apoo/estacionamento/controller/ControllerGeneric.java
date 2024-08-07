@@ -49,6 +49,7 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 
 	@Override
 	public final Long ValorAPagar(String placa) {
+		
 		var veiculo = repository.consult(placa);
 		LocalDateTime horaEnt = veiculo.getHoraEntrada();
 		LocalDateTime horaSai = LocalDateTime.now();
@@ -57,10 +58,10 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 		Duration tempo =  Duration.between(horaEnt, horaSai);
 
 		long tempoEstacionado = tempo.toHours();
-		long minutosRestantes = tempo.toMinutesPart();
+			
 
-		return tempoEstacionado + minutosRestantes;		
-
+		
+		
 	}
 	
 	
@@ -76,6 +77,5 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 	public abstract boolean validarAnoVeiculo(Veiculo veiculo);
 	
 	
-	public abstract Veiculo cadastrarVeiculo();
 
 }

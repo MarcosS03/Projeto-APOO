@@ -5,7 +5,7 @@ public class PerNoite extends PagamentoDecorator{
 	
 	
 	
-	public PerNoite(Pagamento pagamentoDecorator) {
+	public PerNoite(IPagamento pagamentoDecorator) {
 		super(pagamentoDecorator);
 		// TODO Auto-generated constructor stub
 	}

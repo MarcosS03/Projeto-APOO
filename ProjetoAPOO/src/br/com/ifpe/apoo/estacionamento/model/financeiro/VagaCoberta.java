@@ -2,7 +2,7 @@ package br.com.ifpe.apoo.estacionamento.model.financeiro;
 
 public class VagaCoberta extends PagamentoDecorator {
 
-	public VagaCoberta(Pagamento pagamentoDecorator) {
+	public VagaCoberta(IPagamento pagamentoDecorator) {
 		super(pagamentoDecorator);
 		// TODO Auto-generated constructor stub
 	}

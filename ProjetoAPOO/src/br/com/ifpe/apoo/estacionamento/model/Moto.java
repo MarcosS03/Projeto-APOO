@@ -2,8 +2,6 @@ package br.com.ifpe.apoo.estacionamento.model;
 
 import java.time.LocalDateTime;
 
-import br.com.ifpe.apoo.estacionamento.controller.TipoPagamento;
-
 
 public class Moto extends Veiculo {
 

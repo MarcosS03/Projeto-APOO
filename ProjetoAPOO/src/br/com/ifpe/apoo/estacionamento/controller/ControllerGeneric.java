@@ -4,6 +4,7 @@ package br.com.ifpe.apoo.estacionamento.controller;
 import java.time.Duration;
 import java.time.LocalDateTime;
 
+import br.com.ifpe.apoo.estacionamento.apresentação.ValoresAdicional;
 import br.com.ifpe.apoo.estacionamento.model.Veiculo;
 import br.com.ifpe.apoo.estacionamento.repository.GenericDAO;
 
@@ -15,16 +16,16 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 
 
 	int vagasDisponiveis = 10;
-	
-	
+
+
 
 	@Override
 	public final void estacionar(Veiculo veiculo) {
-		
-		
+
+
 		this.validarAnoVeiculo(veiculo);
-		
-		
+
+
 		if (vagaDisponivel() == true && this.validarAnoVeiculo(veiculo) == true) {
 			repository.add(veiculo);
 
@@ -34,7 +35,7 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 
 	@Override
 	public final Veiculo Consultar(String placa) {
-		
+
 		var veiculo = repository.consult(placa);
 		return veiculo;
 	}
@@ -48,23 +49,28 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 	}
 
 	@Override
-	public final Long ValorAPagar(String placa) {
-		
+	public final double ValorAPagar(String placa, double valorHora) {
+
 		var veiculo = repository.consult(placa);
 		LocalDateTime horaEnt = veiculo.getHoraEntrada();
 		LocalDateTime horaSai = LocalDateTime.now();
 
 
-		Duration tempo =  Duration.between(horaEnt, horaSai);
-
-		long tempoEstacionado = tempo.toHours();
-			
-
+//		Duration tempo =  Duration.between(horaEnt, horaSai);
+//
+//		double valorTotal = tempo.toHours() * valorHora;
 		
+		double tempo = 10;
+		double valorTotal =  tempo * valorHora;
 		
+		repository.remove(placa);
+
+		return valorTotal;
+
+
 	}
-	
-	
+
+
 	public final boolean vagaDisponivel() {
 
 		if (this.dados == null || this.dados.getDados().size() <= vagasDisponiveis) {
@@ -72,10 +78,10 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 		}
 		return false;
 	}
-	
-	
+
+
 	public abstract boolean validarAnoVeiculo(Veiculo veiculo);
-	
-	
+
+
 
 }

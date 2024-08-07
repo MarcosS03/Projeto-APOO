@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 import br.com.ifpe.apoo.estacionamento.controller.Controller;
 import br.com.ifpe.apoo.estacionamento.controller.ControllerMoto;
-import br.com.ifpe.apoo.estacionamento.controller.TipoPagamento;
 import br.com.ifpe.apoo.estacionamento.model.Carro;
 import br.com.ifpe.apoo.estacionamento.model.Moto;
 import br.com.ifpe.apoo.estacionamento.model.Veiculo;
@@ -20,7 +19,7 @@ public class Apresentacao {
 
 		Scanner sc = new Scanner(System.in);
 		ControllerMoto controle = new ControllerMoto(); //aqui aplicar o padrão AbstractFactoey para acessar o controller
-		
+
 
 
 		while (true) {
@@ -52,8 +51,8 @@ public class Apresentacao {
 				dadosV.cadastrarVeiculo();
 
 				int opcaoVeiculo =  dadosV.getTipoVeiculo();
-				
-				
+
+
 				if (opcaoVeiculo == 1) {
 
 					Moto moto = new Moto.MotoBuilder()
@@ -94,16 +93,24 @@ public class Apresentacao {
 			case 3: {
 				System.out.println("Informe a placa do seu veiculo!");
 				var placa = sc.nextLine();
+				var valorHora = new ValoresAdicional().valorHonra();
 
-				System.out.println("informe os dados do seu veículo");
+				var s = String.valueOf(valorHora);
+				var v = Double.parseDouble(s);
 
-				controle.Atualizar(placa);
+				var pagamento = controle.ValorAPagar(placa, v);
 
-
+				System.out.println(pagamento);
 
 
 			}
 			case 4: {
+				System.out.println("Informe a placa do seu veiculo!");
+				var placa = sc.nextLine();
+
+				System.out.println("informe os dados do seu veículo");
+
+				controle.Atualizar(placa);
 
 			}
 
@@ -111,46 +118,5 @@ public class Apresentacao {
 			}
 		}
 
-		/*		Moto moto = new Moto.MotoBuilder()
-				.marca("Honda")
-				.anoFabricacao(2020)
-				.placa("qyc")
-				.build();
-
-
-
-
-
-
-		GenericDAO.singleton()
-		.add(moto);
-
-
-		Carro carro = new Carro.CarroBuilder()
-				.marca("Toyota")
-				.modelo("corolla")
-				.anoFabricacao(2020)
-				.placa("ttt")
-				.build();
-
-		GenericDAO.singleton()
-		.add(carro);
-
-
-
-
-
-
-
-		var moto1 = GenericDAO.singleton()
-				.consult("qyc");
-
-		var carro1 = GenericDAO.singleton()
-				.consult("ttt");
-
-		System.out.println(moto1);
-
-		System.out.println(carro1);
-		 */
 	}
 }

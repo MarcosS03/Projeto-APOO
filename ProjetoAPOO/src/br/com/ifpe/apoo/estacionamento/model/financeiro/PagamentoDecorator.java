@@ -2,23 +2,19 @@ package br.com.ifpe.apoo.estacionamento.model.financeiro;
 
 public abstract class PagamentoDecorator implements IPagamento {
 
-	private Pagamento pagamentoDecorator;
+	protected IPagamento pagamentoDecorator;
 	
 	
-	public PagamentoDecorator(Pagamento pagamentoDecorator) {
+	public PagamentoDecorator(IPagamento pagamentoDecorator) {
 		this.pagamentoDecorator = pagamentoDecorator;
 	}
+
 
 
 	@Override
 	public double taxa() {
 		
 		return pagamentoDecorator.taxa();
-	}
-
-
-	public Pagamento getPagamentoDecorator() {
-		return pagamentoDecorator;
 	}
 
 

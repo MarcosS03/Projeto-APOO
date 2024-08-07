@@ -2,8 +2,6 @@ package br.com.ifpe.apoo.estacionamento.model;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
-
-import br.com.ifpe.apoo.estacionamento.controller.TipoPagamento;
 import br.com.ifpe.apoo.estacionamento.model.financeiro.PagamentoDecorator;
 
 

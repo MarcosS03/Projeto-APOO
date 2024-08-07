@@ -3,7 +3,7 @@ package br.com.ifpe.apoo.estacionamento.model.financeiro;
 public class ProximoPolo extends PagamentoDecorator {
 
 	
-	public ProximoPolo(Pagamento pagamentoDecorator) {
+	public ProximoPolo(IPagamento pagamentoDecorator) {
 		super(pagamentoDecorator);
 		// TODO Auto-generated constructor stub
 	}

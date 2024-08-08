@@ -9,8 +9,8 @@ public class Moto extends Veiculo {
 
 
 	private Moto(String marca, String modelo, int anoFabricacao, String placa, String proprietario,
-			LocalDateTime horaEntrada, LocalDateTime horaSaida) {
-		super(marca, modelo, anoFabricacao, placa, proprietario, horaEntrada, horaSaida);
+			LocalDateTime horaEntrada) {
+		super(marca, modelo, anoFabricacao, placa, proprietario, horaEntrada);
 	}
 
 
@@ -37,8 +37,7 @@ public class Moto extends Veiculo {
 		private String placa;
 		private String proprietario;
 		private LocalDateTime horaEntrada;
-		private LocalDateTime horaSaida;
-		
+		private LocalDateTime horaSaida;		
 
 
 		@Override
@@ -75,14 +74,9 @@ public class Moto extends Veiculo {
 			this.horaEntrada = horaEntrada;
 			return this;
 		}
-
-		public MotoBuilder HoraSaida(LocalDateTime horaSaida) {
-			this.horaSaida = horaSaida;
-			return this;
-		}
 		
 		public Moto build() {
-			return new Moto(marca, modelo, anoFabricacao, placa, proprietario, horaEntrada, horaSaida);
+			return new Moto(marca, modelo, anoFabricacao, placa, proprietario, horaEntrada);
 
 		}
 

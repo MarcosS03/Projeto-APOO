@@ -4,6 +4,7 @@ package br.com.ifpe.apoo.estacionamento.controller;
 import java.time.Duration;
 import java.time.LocalDateTime;
 
+import br.com.ifpe.apoo.estacionamento.apresentação.DadosVeiculo;
 import br.com.ifpe.apoo.estacionamento.apresentação.ValoresAdicional;
 import br.com.ifpe.apoo.estacionamento.model.Veiculo;
 import br.com.ifpe.apoo.estacionamento.repository.GenericDAO;
@@ -41,10 +42,9 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 	}
 
 	@Override
-	public final void Atualizar(String placa) {
-		var veiculo = repository.consult(placa);
-
-		repository.update(veiculo);
+	public final void Atualizar(String placa, DadosVeiculo dadosVeiculoAtualizado) {
+	
+		repository.update(placa, dadosVeiculoAtualizado);
 
 	}
 

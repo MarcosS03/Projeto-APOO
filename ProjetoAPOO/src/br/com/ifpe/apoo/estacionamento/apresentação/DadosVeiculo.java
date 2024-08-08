@@ -6,7 +6,6 @@ import br.com.ifpe.apoo.estacionamento.model.Veiculo;
 
 public class DadosVeiculo {
 	
-	Veiculo veiculo;
 	
 	String proprietario;
 	String marca;

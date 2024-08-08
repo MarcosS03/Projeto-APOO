@@ -14,7 +14,7 @@ public class Veiculo extends Base{
 	protected String placa;
 	protected String proprietario;
 	private LocalDateTime horaEntrada;
-	private LocalDateTime horaSaida;
+	
 	
 	
 	
@@ -22,7 +22,7 @@ public class Veiculo extends Base{
 
 	
 	public Veiculo(String marca, String modelo, int anoFabricacao, String placa, String proprietario,
-			LocalDateTime horaEntrada, LocalDateTime horaSaida) {
+			LocalDateTime horaEntrada) {
 		super();
 		this.marca = marca;
 		this.modelo = modelo;
@@ -30,7 +30,7 @@ public class Veiculo extends Base{
 		this.placa = placa;
 		this.proprietario = proprietario;
 		this.horaEntrada = horaEntrada.now().truncatedTo(ChronoUnit.MINUTES);
-		this.horaSaida = horaSaida.now().truncatedTo(ChronoUnit.MINUTES);
+
 		
 	}
 
@@ -101,18 +101,6 @@ public class Veiculo extends Base{
 
 	public void setHoraEntrada(LocalDateTime horaEntrada) {
 		this.horaEntrada = horaEntrada;
-	}
-
-
-
-	public LocalDateTime getHoraSaida() {
-		return horaSaida;
-	}
-
-
-
-	public void setHoraSaida(LocalDateTime horaSaida) {
-		this.horaSaida = horaSaida;
 	}
 	
 

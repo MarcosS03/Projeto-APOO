@@ -9,8 +9,8 @@ public class Carro extends Veiculo{
 
 
 	private Carro(String marca, String modelo, int anoFabricacao, String placa, String proprietario,
-			LocalDateTime horaEntrada, LocalDateTime horaSaida) {
-		super(marca, modelo, anoFabricacao, placa, proprietario, horaEntrada, horaSaida);
+			LocalDateTime horaEntrada) {
+		super(marca, modelo, anoFabricacao, placa, proprietario, horaEntrada);
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -36,7 +36,7 @@ public class Carro extends Veiculo{
 		private String placa;
 		private String proprietario;
 		private LocalDateTime horaEntrada;
-		private LocalDateTime horaSaida;
+
 
 
 		@Override
@@ -65,10 +65,7 @@ public class Carro extends Veiculo{
 			this.horaEntrada = horaEntrada;
 			return this;
 		}
-		public CarroBuilder horaSaida(LocalDateTime horaSaida) {
-			this.horaSaida = horaSaida;
-			return this;
-		}
+
 		
 		public CarroBuilder proprietario(String proprietario) {
 			this.proprietario = proprietario;
@@ -77,7 +74,7 @@ public class Carro extends Veiculo{
 		
 
 		public Carro build() {
-			return new Carro(marca, modelo, anoFabricacao, placa, proprietario, horaEntrada, horaSaida);
+			return new Carro(marca, modelo, anoFabricacao, placa, proprietario, horaEntrada);
 
 		}
 		

@@ -53,23 +53,14 @@ public class GenericDAO <T extends Veiculo> implements IGenericDAO<T> {
 	}
 
 	@Override
-	public void update(T veiculo) {
+	public void update(String placa, DadosVeiculo dadosVeiculoAtualizado ) {
+		var veiculoAntigo = this.consult(placa);
 		
-		DadosVeiculo cadastro = new DadosVeiculo();
-		
-//		var veiculoAtual = cadastro.dadosVeiculo();
-//		
-//		
-//		for (T v : dados) {
-//			if (v.getPlaca().equals(veiculo.getPlaca())) {				
-//				v.setMarca(veiculoAtual.getMarca());
-//				v.setModelo(veiculoAtual.getModelo());
-//				v.setAnoFabricacao(veiculoAtual.getAnoFabricacao());
-//				v.setPlaca(veiculoAtual.getPlaca());
-//				
-//				
-//			}
-//		}
+		veiculoAntigo.setProprietario(dadosVeiculoAtualizado.getProprietario());
+		veiculoAntigo.setMarca(dadosVeiculoAtualizado.getMarca());
+		veiculoAntigo.setModelo(dadosVeiculoAtualizado.getModelo());
+		veiculoAntigo.setAnoFabricacao(dadosVeiculoAtualizado.getAnoFabricacao());
+		veiculoAntigo.setPlaca(dadosVeiculoAtualizado.getPlaca());
 
 	}
 

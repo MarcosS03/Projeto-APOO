@@ -85,6 +85,9 @@ public class Apresentacao {
 				var placa = sc.nextLine();
 
 				var consulta = controle.Consultar(placa);
+				if (consulta == null) {
+					System.out.println("Veiculo não encontrado!");
+				}
 				System.out.println(consulta);
 				break;
 
@@ -101,17 +104,23 @@ public class Apresentacao {
 				var pagamento = controle.ValorAPagar(placa, v);
 
 				System.out.println(pagamento);
-
+				break;
 
 			}
 			case 4: {
 				System.out.println("Informe a placa do seu veiculo!");
 				var placa = sc.nextLine();
 
+				DadosVeiculo dadosVeiculoAtualizado = new DadosVeiculo();
+				dadosVeiculoAtualizado.cadastrarVeiculo();
+
+
+
+
 				System.out.println("informe os dados do seu veículo");
 
-				controle.Atualizar(placa);
-
+				controle.Atualizar(placa, dadosVeiculoAtualizado);
+				break;
 			}
 
 

@@ -7,11 +7,12 @@ import java.time.LocalDateTime;
 import br.com.ifpe.apoo.estacionamento.apresentação.DadosVeiculo;
 import br.com.ifpe.apoo.estacionamento.apresentação.ValoresAdicional;
 import br.com.ifpe.apoo.estacionamento.model.Veiculo;
+import br.com.ifpe.apoo.estacionamento.repository.FactoryDAO;
 import br.com.ifpe.apoo.estacionamento.repository.GenericDAO;
 
 public abstract class ControllerGeneric<T extends Veiculo> implements IController<T> {
 
-	GenericDAO<Veiculo> repository = GenericDAO.singleton();
+	GenericDAO<Veiculo> repository = FactoryDAO.getDAO();
 
 	GenericDAO<Veiculo> dados;
 

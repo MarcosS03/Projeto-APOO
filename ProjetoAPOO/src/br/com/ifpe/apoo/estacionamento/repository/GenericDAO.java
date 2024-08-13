@@ -14,12 +14,8 @@ import br.com.ifpe.apoo.estacionamento.model.Veiculo;
 public class GenericDAO <T extends Veiculo> implements IGenericDAO<T> {
 	
 
-	List<T>dados = new ArrayList<T>();
+	List<T> dados = new ArrayList<T>();
 	
-
-	
-
-
 	private static GenericDAO singleton = null;
 
 

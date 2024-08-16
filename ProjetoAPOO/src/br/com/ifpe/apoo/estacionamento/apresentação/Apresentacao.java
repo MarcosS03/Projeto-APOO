@@ -18,7 +18,7 @@ public class Apresentacao {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		ControllerMoto controle = new ControllerMoto(); //aqui aplicar o padrão AbstractFactoey para acessar o controller
+		Facade facade = new Facade();
 
 
 
@@ -46,37 +46,41 @@ public class Apresentacao {
 
 			switch (escolha) {
 			case 1: {
-
-				DadosVeiculo dadosV = new DadosVeiculo();
-				dadosV.cadastrarVeiculo();
-
-				int opcaoVeiculo =  dadosV.getTipoVeiculo();
+			
+				//DadosVeiculo dadosV = new DadosVeiculo();
+				facade.cadastrarVeiculo();
+				
+				
+				int opcaoVeiculo =  facade.dadosVeiculo().tipoVeiculo;//dados ta puxando nada
 
 
 				if (opcaoVeiculo == 1) {
 
 					Moto moto = new Moto.MotoBuilder()
-							.marca(dadosV.getMarca())
-							.modelo(dadosV.getModelo())
-							.anoFabricacao(dadosV.getAnoFabricacao())
-							.proprietario(dadosV.getProprietario())
-							.placa(dadosV.getPlaca())
+							.marca(facade.dadosVeiculo().marca)
+							.modelo(facade.dadosVeiculo().modelo)
+							.anoFabricacao(facade.dadosVeiculo().anoFabricacao)
+							.proprietario(facade.dadosVeiculo().proprietario)
+							.cpf(facade.dadosVeiculo().cpf)
+							.placa(facade.dadosVeiculo().placa)
 							.build();
 
-					controle.estacionar(moto);
+					facade.estacionar(moto);
 					break;
 				}else if (opcaoVeiculo == 2) {
 					Carro  carro = new Carro.CarroBuilder()
-							.marca(dadosV.getMarca())
-							.modelo(dadosV.getModelo())
-							.anoFabricacao(dadosV.getAnoFabricacao())
-							.proprietario(dadosV.getProprietario())
-							.placa(dadosV.getPlaca())
+							.marca(facade.dadosVeiculo().marca)
+							.modelo(facade.dadosVeiculo().modelo)
+							.anoFabricacao(facade.dadosVeiculo().anoFabricacao)
+							.proprietario(facade.dadosVeiculo().proprietario)
+							.cpf(facade.dadosVeiculo().cpf)
+							.placa(facade.dadosVeiculo().placa)
 							.build();
 
-					controle.estacionar(carro);
+					facade.estacionar(carro);
 					break;
 				}
+				break;
 
 			}
 			case 2: {
@@ -84,7 +88,7 @@ public class Apresentacao {
 				System.out.println("Informe a placa do seu veiculo!");
 				var placa = sc.nextLine();
 
-				var consulta = controle.Consultar(placa);
+				var consulta = facade.consultar(placa);
 				if (consulta == null) {
 					System.out.println("Veiculo não encontrado!");
 				}
@@ -101,7 +105,7 @@ public class Apresentacao {
 				var s = String.valueOf(valorHora);
 				var v = Double.parseDouble(s);
 
-				var pagamento = controle.ValorAPagar(placa, v);
+				var pagamento = facade.ValorAPagar(placa, v);
 
 				System.out.println(pagamento);
 				break;
@@ -119,7 +123,7 @@ public class Apresentacao {
 
 				System.out.println("informe os dados do seu veículo");
 
-				controle.Atualizar(placa, dadosVeiculoAtualizado);
+				facade.Atualizar(placa, dadosVeiculoAtualizado);
 				break;
 			}
 

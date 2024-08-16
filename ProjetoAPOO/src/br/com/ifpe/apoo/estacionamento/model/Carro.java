@@ -1,6 +1,7 @@
 package br.com.ifpe.apoo.estacionamento.model;
 
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 
 
 
@@ -8,10 +9,18 @@ import java.time.LocalDateTime;
 public class Carro extends Veiculo{
 
 
-	private Carro(String marca, String modelo, int anoFabricacao, String placa, String proprietario,
-			LocalDateTime horaEntrada) {
-		super(marca, modelo, anoFabricacao, placa, proprietario, horaEntrada);
-		// TODO Auto-generated constructor stub
+	
+	public Carro (String marca, String modelo, int anoFabricacao, String placa, String proprietario,
+			String cpf, LocalDateTime horaEntrada) {
+		this.marca = marca;
+		this.modelo = modelo;
+		this.anoFabricacao = anoFabricacao;
+		this.placa = placa;
+		this.proprietario = proprietario;
+		this.cpf = cpf;
+		this.horaEntrada = horaEntrada.now().truncatedTo(ChronoUnit.MINUTES);
+		return; 
+		
 	}
 	
 	
@@ -24,6 +33,7 @@ public class Carro extends Veiculo{
 				+ "\nAno: " + this.anoFabricacao
 				+ "\nPlaca: " + this.placa
 				+ "\nProprietario: " + this.proprietario
+				+ "\nCPF: " + this.cpf
 				+ "\nHoraEntrada: "+ this.getHoraEntrada();
 	}
 	
@@ -35,6 +45,7 @@ public class Carro extends Veiculo{
 		private int anoFabricacao;
 		private String placa;
 		private String proprietario;
+		private String cpf;
 		private LocalDateTime horaEntrada;
 
 
@@ -72,13 +83,18 @@ public class Carro extends Veiculo{
 			return this;
 		}
 		
+		public CarroBuilder cpf(String cpf) {
+			this.cpf = cpf;
+			return this;
+		}
 
 		public Carro build() {
-			return new Carro(marca, modelo, anoFabricacao, placa, proprietario, horaEntrada);
+			return new Carro(marca, modelo, anoFabricacao, placa, proprietario, cpf, horaEntrada);
 
 		}
 		
 		
 	}
+
 
 }

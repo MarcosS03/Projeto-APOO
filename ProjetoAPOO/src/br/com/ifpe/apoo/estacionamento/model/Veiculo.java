@@ -6,33 +6,19 @@ import br.com.ifpe.apoo.estacionamento.model.financeiro.PagamentoDecorator;
 
 
 
-public class Veiculo extends Base{
+public abstract class Veiculo extends Base{
 	
 	protected String marca;
 	protected String modelo;
 	protected int anoFabricacao;
 	protected String placa;
 	protected String proprietario;
-	private LocalDateTime horaEntrada;
-	
+	protected String cpf;
+	protected LocalDateTime horaEntrada;
 	
 	
 	
 
-
-	
-	public Veiculo(String marca, String modelo, int anoFabricacao, String placa, String proprietario,
-			LocalDateTime horaEntrada) {
-		super();
-		this.marca = marca;
-		this.modelo = modelo;
-		this.anoFabricacao = anoFabricacao;
-		this.placa = placa;
-		this.proprietario = proprietario;
-		this.horaEntrada = horaEntrada.now().truncatedTo(ChronoUnit.MINUTES);
-
-		
-	}
 
 	public String getMarca() {
 		return marca;
@@ -91,6 +77,15 @@ public class Veiculo extends Base{
 		this.proprietario = proprietario;
 	}
 
+
+	public String getCpf() {
+		return cpf;
+	}
+
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
 
 
 	public LocalDateTime getHoraEntrada() {

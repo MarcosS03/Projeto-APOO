@@ -5,22 +5,23 @@ import java.util.Scanner;
 import br.com.ifpe.apoo.estacionamento.model.Veiculo;
 
 public class DadosVeiculo {
-	
-	
+
+
 	String proprietario;
+	String cpf;
 	String marca;
 	String modelo;
 	String placa;
 	int anoFabricacao;
-	
+
 	int tipoVeiculo;
 
 
 	Scanner sc = new Scanner(System.in);
 
-	
-	
-	
+
+
+
 	public void cadastrarVeiculo() {
 
 
@@ -35,19 +36,22 @@ public class DadosVeiculo {
 
 
 
-			this.dadosVeiculo();
+		this.dadosVeiculo();
 
 
-	
+
 	}
-	
-	
+
+
 	public void dadosVeiculo(){
 
 
 
 		System.out.println("Informe o seu nome: ");
-		this.proprietario = sc.nextLine();		
+		this.proprietario = sc.nextLine();
+
+		System.out.println("informe seu CPF: ");
+		this.cpf = sc.nextLine();
 
 		System.out.println("Informe a marca do veiculo: ");
 		this.marca = sc.nextLine();
@@ -61,14 +65,14 @@ public class DadosVeiculo {
 
 		System.out.println("Informe a placa do veiculo: ");
 		this.placa = sc.nextLine();
-	
-	}
-	
-	
-	
-	
 
-	
+	}
+
+
+
+
+
+
 	public int getTipoVeiculo() {
 		return tipoVeiculo;
 	}
@@ -125,8 +129,18 @@ public class DadosVeiculo {
 	public void setAnoFabricacao(int anoFabricacao) {
 		this.anoFabricacao = anoFabricacao;
 	}
-	
-	
-	
+
+
+	public String getCpf() {
+		return cpf;
+	}
+
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+
+
 
 }

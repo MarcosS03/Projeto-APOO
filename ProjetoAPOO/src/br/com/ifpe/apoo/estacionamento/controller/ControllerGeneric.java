@@ -28,10 +28,11 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 		this.validarAnoVeiculo(veiculo);
 
 
-		if (vagaDisponivel() == true && this.validarAnoVeiculo(veiculo) == true) {
+		if (vagaDisponivel() == true && this.validarAnoVeiculo(veiculo) == true && this.validarCPF(veiculo)) {
 			repository.add(veiculo);
 
-
+		}else {
+			System.out.println("erro no cadastro");
 		}
 	}
 
@@ -44,7 +45,7 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 
 	@Override
 	public final void Atualizar(String placa, DadosVeiculo dadosVeiculoAtualizado) {
-	
+
 		repository.update(placa, dadosVeiculoAtualizado);
 
 	}
@@ -57,13 +58,13 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 		LocalDateTime horaSai = LocalDateTime.now();
 
 
-//		Duration tempo =  Duration.between(horaEnt, horaSai);
-//
-//		double valorTotal = tempo.toHours() * valorHora;
-		
+		//		Duration tempo =  Duration.between(horaEnt, horaSai);
+		//
+		//		double valorTotal = tempo.toHours() * valorHora;
+
 		double tempo = 10;
 		double valorTotal =  tempo * valorHora;
-		
+
 		repository.remove(placa);
 
 		return valorTotal;
@@ -83,6 +84,10 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 
 	public abstract boolean validarAnoVeiculo(Veiculo veiculo);
 
-
+	public final boolean validarCPF(Veiculo cpf) {
+		ValidateCPF validarCPF = new ValidateCPF();
+		return validarCPF.validateCpf(cpf);
+		
+	}
 
 }

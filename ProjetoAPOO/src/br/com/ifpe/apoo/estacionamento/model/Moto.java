@@ -1,6 +1,7 @@
 package br.com.ifpe.apoo.estacionamento.model;
 
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 
 
 public class Moto extends Veiculo {
@@ -8,9 +9,17 @@ public class Moto extends Veiculo {
 
 
 
-	private Moto(String marca, String modelo, int anoFabricacao, String placa, String proprietario,
-			LocalDateTime horaEntrada) {
-		super(marca, modelo, anoFabricacao, placa, proprietario, horaEntrada);
+	public Moto (String marca, String modelo, int anoFabricacao, String placa, String proprietario,
+			String cpf, LocalDateTime horaEntrada) {
+		this.marca = marca;
+		this.modelo = modelo;
+		this.anoFabricacao = anoFabricacao;
+		this.placa = placa;
+		this.proprietario = proprietario;
+		this.cpf = cpf;
+		this.horaEntrada = horaEntrada.now().truncatedTo(ChronoUnit.MINUTES);
+		return; 
+		
 	}
 
 
@@ -24,6 +33,7 @@ public class Moto extends Veiculo {
 				+ "\nAno: " + this.anoFabricacao
 				+ "\nPlaca: " + this.placa
 				+ "\nProprietario: " + this.proprietario
+				+"\nCPF: " + this.cpf
 				+ "\nHoraEntrada: "+ this.getHoraEntrada();
 				
 	}
@@ -36,8 +46,9 @@ public class Moto extends Veiculo {
 		private int anoFabricacao;
 		private String placa;
 		private String proprietario;
+		private String cpf;
 		private LocalDateTime horaEntrada;
-		private LocalDateTime horaSaida;		
+		
 
 
 		@Override
@@ -68,6 +79,11 @@ public class Moto extends Veiculo {
 			this.proprietario = proprietario;
 			return this;
 		}
+		
+		public MotoBuilder cpf(String cpf) {
+			this.cpf = cpf;
+			return this;
+		}
 
 
 		public MotoBuilder HoraEntrada(LocalDateTime horaEntrada) {
@@ -76,7 +92,7 @@ public class Moto extends Veiculo {
 		}
 		
 		public Moto build() {
-			return new Moto(marca, modelo, anoFabricacao, placa, proprietario, horaEntrada);
+			return new Moto(marca, modelo, anoFabricacao, placa, proprietario, cpf, horaEntrada);
 
 		}
 

@@ -23,7 +23,6 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 
 
 
-
 	@Override
 	public final void estacionar(Veiculo veiculo) {
 
@@ -54,13 +53,13 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 			repository.add(veiculo);
 			log.log("Veiculo placa: " + veiculo.getPlaca() + "cadastrado");
 		}
-
 	}
 
 	@Override
 	public final Veiculo Consultar(String placa) {
 
 		var veiculo = repository.consult(placa);
+
 
 		log.log("consulta veiculo");
 
@@ -72,7 +71,7 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 
 		repository.update(placa, dadosVeiculoAtualizado);
 
-		log.log("Atualização dos dados veiculo, placa: "+placa);
+		log.log("Atualização dos dados veiculo, placa: "+ placa);
 
 	}
 
@@ -83,10 +82,10 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 		LocalDateTime horaEnt = veiculo.getHoraEntrada();
 		LocalDateTime horaSai = LocalDateTime.now();
 
-
 //				Duration tempo =  Duration.between(horaEnt, horaSai);
 //		
 //				double valorTotal = tempo.toHours() * valorHora;
+
 
 		double tempo = 10;
 		double valorTotal =  tempo * valorHora;
@@ -117,7 +116,6 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 	public final boolean validarCPF(Veiculo cpf) {
 		ValidateCPF validarCPF = new ValidateCPF();
 		return validarCPF.validateCpf(cpf);
-
 
 	}
 

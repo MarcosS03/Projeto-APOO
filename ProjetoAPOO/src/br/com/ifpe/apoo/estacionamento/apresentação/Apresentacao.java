@@ -40,13 +40,19 @@ public class Apresentacao {
 
 
 			if (escolha >= 5) {
-				System.out.println("Atendimento finalizado, obrigado");
+
+				System.out.println("Atendimento finalizado");
+
 				break;
 			}
 
 			switch (escolha) {
 			case 1: {
 
+				facade.cadastrarVeiculo();
+			
+			
+	
 				facade.cadastrarVeiculo();
 				
 				

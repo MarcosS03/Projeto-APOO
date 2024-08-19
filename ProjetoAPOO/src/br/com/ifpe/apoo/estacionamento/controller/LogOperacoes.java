@@ -15,6 +15,7 @@ public class LogOperacoes {
 	protected void log(String message) {
 		String timeStamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
 		log.append(timeStamp).append(" - ").append(message).append("\n");
+
 		this.saveLog();
 	}
 
@@ -25,11 +26,9 @@ public class LogOperacoes {
 	}
 
 
-
-
-
 	// Método para salvar o log em um arquivo
 	private void saveLog() {
+
 		try (FileWriter fileWriter = new FileWriter("logOperações.txt", true);
 				PrintWriter printWriter = new PrintWriter(fileWriter)) {
 			printWriter.print(log.toString());

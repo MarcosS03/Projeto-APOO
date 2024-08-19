@@ -50,10 +50,6 @@ public class Apresentacao {
 			case 1: {
 
 				facade.cadastrarVeiculo();
-			
-			
-	
-				facade.cadastrarVeiculo();
 				
 				
 				int opcaoVeiculo =  facade.dadosVeiculo().tipoVeiculo;
@@ -113,7 +109,7 @@ public class Apresentacao {
 
 				var pagamento = facade.ValorAPagar(placa, v);
 
-				System.out.println(pagamento);
+				System.out.println("Valor total: " + "R$"+pagamento);
 				break;
 
 			}

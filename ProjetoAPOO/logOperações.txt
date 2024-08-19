@@ -1,0 +1,15 @@
+2024-08-19 17:22:37 - Estacionamento com vaga para a placa: 10
+2024-08-19 17:22:37 - Estacionamento com vaga para a placa: 10
+2024-08-19 17:22:37 - Veiculo de placa: 10 com ano ok!
+2024-08-19 17:22:37 - Estacionamento com vaga para a placa: 10
+2024-08-19 17:22:37 - Veiculo de placa: 10 com ano ok!
+2024-08-19 17:22:37 - CPF: 11180831489 ok!
+2024-08-19 17:22:37 - Estacionamento com vaga para a placa: 10
+2024-08-19 17:22:37 - Veiculo de placa: 10 com ano ok!
+2024-08-19 17:22:37 - CPF: 11180831489 ok!
+2024-08-19 17:22:37 - Veiculo placa: 10cadastrado
+2024-08-19 17:22:37 - Estacionamento com vaga para a placa: 10
+2024-08-19 17:22:37 - Veiculo de placa: 10 com ano ok!
+2024-08-19 17:22:37 - CPF: 11180831489 ok!
+2024-08-19 17:22:37 - Veiculo placa: 10cadastrado
+2024-08-19 17:22:39 - consulta veiculo

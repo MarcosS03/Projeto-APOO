@@ -36,104 +36,111 @@ public class Apresentacao {
 
 					""");
 			var valor = sc.nextLine();
-			var escolha = Integer.parseInt(valor);
+			Integer escolha= null;
 
-
-			if (escolha >= 5) {
-
-				System.out.println("Atendimento finalizado");
-
-				break;
-			}
-
-			switch (escolha) {
-			case 1: {
-
-				facade.cadastrarVeiculo();
-			
-			
-	
-				facade.cadastrarVeiculo();
-				
-				
-				int opcaoVeiculo =  facade.dadosVeiculo().tipoVeiculo;
+			try {
+				escolha = Integer.parseInt(valor);
 
 
 
-				if (opcaoVeiculo == 1) {
 
-					Moto moto = new Moto.MotoBuilder()
-							.marca(facade.dadosVeiculo().marca)
-							.modelo(facade.dadosVeiculo().modelo)
-							.anoFabricacao(facade.dadosVeiculo().anoFabricacao)
-							.proprietario(facade.dadosVeiculo().proprietario)
-							.cpf(facade.dadosVeiculo().cpf)
-							.placa(facade.dadosVeiculo().placa)
-							.build();
+				if (escolha == 5) {
 
-					facade.estacionar(moto);
-					break;
-				}else if (opcaoVeiculo == 2) {
-					Carro  carro = new Carro.CarroBuilder()
-							.marca(facade.dadosVeiculo().marca)
-							.modelo(facade.dadosVeiculo().modelo)
-							.anoFabricacao(facade.dadosVeiculo().anoFabricacao)
-							.proprietario(facade.dadosVeiculo().proprietario)
-							.cpf(facade.dadosVeiculo().cpf)
-							.placa(facade.dadosVeiculo().placa)
-							.build();
+					System.out.println("Atendimento finalizado");
 
-					facade.estacionar(carro);
 					break;
 				}
-				break;
 
-			}
-			case 2: {
+				switch (escolha) {
+				case 1: {
 
-				System.out.println("Informe a placa do seu veiculo!");
-				var placa = sc.nextLine();
+					facade.cadastrarVeiculo();
 
-				var consulta = facade.consultar(placa);
-				if (consulta == null) {
-					System.out.println("Veiculo não encontrado!");
+
+					int opcaoVeiculo =  facade.dadosVeiculo().tipoVeiculo;
+
+
+
+					if (opcaoVeiculo == 1) {
+
+						Moto moto = new Moto.MotoBuilder()
+								.marca(facade.dadosVeiculo().marca)
+								.modelo(facade.dadosVeiculo().modelo)
+								.anoFabricacao(facade.dadosVeiculo().anoFabricacao)
+								.proprietario(facade.dadosVeiculo().proprietario)
+								.cpf(facade.dadosVeiculo().cpf)
+								.placa(facade.dadosVeiculo().placa)
+								.build();
+
+						facade.estacionar(moto);
+						break;
+					}else if (opcaoVeiculo == 2) {
+						Carro  carro = new Carro.CarroBuilder()
+								.marca(facade.dadosVeiculo().marca)
+								.modelo(facade.dadosVeiculo().modelo)
+								.anoFabricacao(facade.dadosVeiculo().anoFabricacao)
+								.proprietario(facade.dadosVeiculo().proprietario)
+								.cpf(facade.dadosVeiculo().cpf)
+								.placa(facade.dadosVeiculo().placa)
+								.build();
+
+						facade.estacionar(carro);
+						break;
+					}
+					break;
+
 				}
-				System.out.println(consulta);
-				break;
+				case 2: {
+
+					System.out.println("Informe a placa do seu veiculo!");
+					var placa = sc.nextLine();
+
+					var consulta = facade.consultar(placa);
+					if (consulta == null) {
+						System.out.println("Veiculo não encontrado!");
+					}
+					System.out.println(consulta);
+					break;
 
 
-			}
-			case 3: {
-				System.out.println("Informe a placa do seu veiculo!");
-				var placa = sc.nextLine();
-				var valorHora = new ValoresAdicional().valorHonra();
+				}
+				case 3: {
+					System.out.println("Informe a placa do seu veiculo!");
+					var placa = sc.nextLine();
+					var valorHora = new ValoresAdicional().valorHonra();
 
-				var s = String.valueOf(valorHora);
-				var v = Double.parseDouble(s);
+					var s = String.valueOf(valorHora);
+					var v = Double.parseDouble(s);
 
-				var pagamento = facade.ValorAPagar(placa, v);
+					var pagamento = facade.ValorAPagar(placa, v);
 
-				System.out.println(pagamento);
-				break;
+					System.out.println(pagamento);
+					break;
 
-			}
-			case 4: {
-				System.out.println("Informe a placa do seu veiculo!");
-				var placa = sc.nextLine();
+				}
+				case 4: {
+					System.out.println("Informe a placa do seu veiculo!");
+					var placa = sc.nextLine();
 
-				DadosVeiculo dadosVeiculoAtualizado = new DadosVeiculo();
-				dadosVeiculoAtualizado.cadastrarVeiculo();
-
-
+					DadosVeiculo dadosVeiculoAtualizado = new DadosVeiculo();
+					dadosVeiculoAtualizado.cadastrarVeiculo();
 
 
-				System.out.println("informe os dados do seu veículo");
-
-				facade.Atualizar(placa, dadosVeiculoAtualizado);
-				break;
-			}
 
 
+					System.out.println("informe os dados do seu veículo");
+
+					facade.Atualizar(placa, dadosVeiculoAtualizado);
+					break;
+				}
+				default:
+					System.out.println("opção invalida\n\n");
+
+
+
+				}
+			} catch (Exception e) {
+				e.getMessage();
 			}
 		}
 

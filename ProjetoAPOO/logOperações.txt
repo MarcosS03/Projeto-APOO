@@ -13,3 +13,78 @@
 2024-08-19 17:22:37 - CPF: 11180831489 ok!
 2024-08-19 17:22:37 - Veiculo placa: 10cadastrado
 2024-08-19 17:22:39 - consulta veiculo
+2024-08-19 19:49:04 - Estacionamento com vaga para a placa: 22
+2024-08-19 19:49:04 - Estacionamento com vaga para a placa: 22
+2024-08-19 19:49:04 - Veiculo de placa: 22 com ano ok!
+2024-08-19 19:49:04 - Estacionamento com vaga para a placa: 22
+2024-08-19 19:49:04 - Veiculo de placa: 22 com ano ok!
+2024-08-19 19:49:04 - CPF: 13379250473 ok!
+2024-08-19 19:49:04 - Estacionamento com vaga para a placa: 22
+2024-08-19 19:49:04 - Veiculo de placa: 22 com ano ok!
+2024-08-19 19:49:04 - CPF: 13379250473 ok!
+2024-08-19 19:49:04 - Veiculo placa: 22cadastrado
+2024-08-19 20:42:58 - consulta veiculo
+2024-08-19 20:44:07 - Estacionamento com vaga para a placa: kkl6125
+2024-08-19 20:44:07 - Estacionamento com vaga para a placa: kkl6125
+2024-08-19 20:44:07 - Veiculo de placa: kkl6125 com ano ok!
+2024-08-19 20:44:07 - Estacionamento com vaga para a placa: kkl6125
+2024-08-19 20:44:07 - Veiculo de placa: kkl6125 com ano ok!
+2024-08-19 20:44:07 - CPF: 13379250473 ok!
+2024-08-19 20:44:07 - Estacionamento com vaga para a placa: kkl6125
+2024-08-19 20:44:07 - Veiculo de placa: kkl6125 com ano ok!
+2024-08-19 20:44:07 - CPF: 13379250473 ok!
+2024-08-19 20:44:07 - Veiculo placa: kkl6125cadastrado
+2024-08-19 20:44:07 - Estacionamento com vaga para a placa: kkl6125
+2024-08-19 20:44:07 - Veiculo de placa: kkl6125 com ano ok!
+2024-08-19 20:44:07 - CPF: 13379250473 ok!
+2024-08-19 20:44:07 - Veiculo placa: kkl6125cadastrado
+2024-08-19 20:45:16 - Estacionamento com vaga para a placa: kkl6125
+2024-08-19 20:44:07 - Estacionamento com vaga para a placa: kkl6125
+2024-08-19 20:44:07 - Veiculo de placa: kkl6125 com ano ok!
+2024-08-19 20:44:07 - CPF: 13379250473 ok!
+2024-08-19 20:44:07 - Veiculo placa: kkl6125cadastrado
+2024-08-19 20:45:16 - Estacionamento com vaga para a placa: kkl6125
+2024-08-19 20:45:16 - Veiculo de placa: kkl6125 com ano antigo
+2024-08-19 20:44:07 - Estacionamento com vaga para a placa: kkl6125
+2024-08-19 20:44:07 - Veiculo de placa: kkl6125 com ano ok!
+2024-08-19 20:44:07 - CPF: 13379250473 ok!
+2024-08-19 20:44:07 - Veiculo placa: kkl6125cadastrado
+2024-08-19 20:45:16 - Estacionamento com vaga para a placa: kkl6125
+2024-08-19 20:45:16 - Veiculo de placa: kkl6125 com ano antigo
+2024-08-19 20:45:16 - CPF:  incorreto
+2024-08-19 20:44:07 - Estacionamento com vaga para a placa: kkl6125
+2024-08-19 20:44:07 - Veiculo de placa: kkl6125 com ano ok!
+2024-08-19 20:44:07 - CPF: 13379250473 ok!
+2024-08-19 20:44:07 - Veiculo placa: kkl6125cadastrado
+2024-08-19 20:45:16 - Estacionamento com vaga para a placa: kkl6125
+2024-08-19 20:45:16 - Veiculo de placa: kkl6125 com ano antigo
+2024-08-19 20:45:16 - CPF:  incorreto
+2024-08-19 20:45:49 - consulta veiculo
+2024-08-19 20:47:05 - Estacionamento com vaga para a placa: kkl6125
+2024-08-19 20:47:05 - Estacionamento com vaga para a placa: kkl6125
+2024-08-19 20:47:05 - Veiculo de placa: kkl6125 com ano ok!
+2024-08-19 20:47:05 - Estacionamento com vaga para a placa: kkl6125
+2024-08-19 20:47:05 - Veiculo de placa: kkl6125 com ano ok!
+2024-08-19 20:47:05 - CPF: 13379250473 ok!
+2024-08-19 20:47:05 - Estacionamento com vaga para a placa: kkl6125
+2024-08-19 20:47:05 - Veiculo de placa: kkl6125 com ano ok!
+2024-08-19 20:47:05 - CPF: 13379250473 ok!
+2024-08-19 20:47:05 - Veiculo placa: kkl6125cadastrado
+2024-08-19 20:47:05 - Estacionamento com vaga para a placa: kkl6125
+2024-08-19 20:47:05 - Veiculo de placa: kkl6125 com ano ok!
+2024-08-19 20:47:05 - CPF: 13379250473 ok!
+2024-08-19 20:47:05 - Veiculo placa: kkl6125cadastrado
+2024-08-19 20:49:15 - pagamento referete ao veiculo: kkl6125
+2024-08-19 20:47:05 - Estacionamento com vaga para a placa: kkl6125
+2024-08-19 20:47:05 - Veiculo de placa: kkl6125 com ano ok!
+2024-08-19 20:47:05 - CPF: 13379250473 ok!
+2024-08-19 20:47:05 - Veiculo placa: kkl6125cadastrado
+2024-08-19 20:49:15 - pagamento referete ao veiculo: kkl6125
+2024-08-19 20:49:15 - veiculo placa: kkl6125 removido
+2024-08-19 20:47:05 - Estacionamento com vaga para a placa: kkl6125
+2024-08-19 20:47:05 - Veiculo de placa: kkl6125 com ano ok!
+2024-08-19 20:47:05 - CPF: 13379250473 ok!
+2024-08-19 20:47:05 - Veiculo placa: kkl6125cadastrado
+2024-08-19 20:49:15 - pagamento referete ao veiculo: kkl6125
+2024-08-19 20:49:15 - veiculo placa: kkl6125 removido
+2024-08-19 20:49:26 - consulta veiculo

@@ -39,26 +39,26 @@ public class ValoresAdicional {
 
 				v = new PerNoite(v);
 				valor = v.taxa();
-				System.out.println(valor +"testeS");
+				System.out.println(valor +"testeS classe valoresAdicional");
 				break;
 			}
 			case 2: {
 				v = new ProximoPolo(v);
 				valor = v.taxa();
-				System.out.println(valor +"testeS");
+				System.out.println(valor +"testeS classe valoresAdicional");
 				break;
 			}
 			case 3: {
 				v = new VagaCoberta(v);
 				valor = v.taxa();
-				System.out.println(valor +"testeS");
+				System.out.println(valor +"testeS classe valoresAdicional");
 				break;
 			}
 			case 4:{
 				
 				v = new VagaSUV(v);
 				valor = v.taxa();
-				System.out.println(valor +"testeS");
+				System.out.println(valor +"testeS classe valoresAdicional");
 				break;
 			}
 			

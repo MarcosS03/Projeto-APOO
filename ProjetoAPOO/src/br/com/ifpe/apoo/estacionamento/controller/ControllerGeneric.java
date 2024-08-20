@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 
 import br.com.ifpe.apoo.estacionamento.apresentação.DadosVeiculo;
 import br.com.ifpe.apoo.estacionamento.apresentação.ValoresAdicional;
+import br.com.ifpe.apoo.estacionamento.controller.exception.CaracterException;
 import br.com.ifpe.apoo.estacionamento.model.Veiculo;
 import br.com.ifpe.apoo.estacionamento.repository.FactoryDAO;
 import br.com.ifpe.apoo.estacionamento.repository.GenericDAO;
@@ -47,12 +48,12 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 			log.logErro("CPF: "+veiculo.getCpf()+" incorreto");
 		}
 
-
-
-		if (vagaDisponivel() == true && this.validarAnoVeiculo(veiculo) == true && this.validarCPF(veiculo)) {
+		if (this.validarVeiculo(veiculo) == true) {
 			repository.add(veiculo);
 			log.log("Veiculo placa: " + veiculo.getPlaca() + "cadastrado");
 		}
+
+
 	}
 
 	@Override
@@ -82,9 +83,9 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 		LocalDateTime horaEnt = veiculo.getHoraEntrada();
 		LocalDateTime horaSai = LocalDateTime.now();
 
-//				Duration tempo =  Duration.between(horaEnt, horaSai);
-//		
-//				double valorTotal = tempo.toHours() * valorHora;
+		//				Duration tempo =  Duration.between(horaEnt, horaSai);
+		//		
+		//				double valorTotal = tempo.toHours() * valorHora;
 
 
 		double tempo = 10;
@@ -117,6 +118,17 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 		ValidateCPF validarCPF = new ValidateCPF();
 		return validarCPF.validateCpf(cpf);
 
+	}
+
+	private boolean validarVeiculo(Veiculo veiculo) {
+		if (this.vagaDisponivel()==true &&
+				this.validarCPF(veiculo) == true &&
+				this.validarAnoVeiculo(veiculo) == true &&
+				this.Consultar(veiculo.getPlaca())== null) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 
 }

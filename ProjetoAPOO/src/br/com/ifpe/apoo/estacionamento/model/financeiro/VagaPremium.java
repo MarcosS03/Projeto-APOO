@@ -1,11 +1,11 @@
 package br.com.ifpe.apoo.estacionamento.model.financeiro;
 
-public class PerNoite extends PagamentoDecorator{
+public class VagaPremium extends PagamentoDecorator{
 
 	
 	
 	
-	public PerNoite(IPagamento pagamentoDecorator) {
+	public VagaPremium(IPagamento pagamentoDecorator) {
 		super(pagamentoDecorator);
 		// TODO Auto-generated constructor stub
 	}
@@ -14,7 +14,7 @@ public class PerNoite extends PagamentoDecorator{
 	@Override
 	public double taxa() {
 		
-		return super.taxa() * 0.75;
+		return super.taxa() + 3.00;
 	}
 
 }

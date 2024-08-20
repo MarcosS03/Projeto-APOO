@@ -113,7 +113,7 @@ public class Apresentacao {
 				}
 				case 3: {
 
-					System.out.println("Informe a placa do seu veiculo!");
+					System.out.println("\nInforme a placa do seu veiculo!");
 					var placa = sc.nextLine();
 					var valorHora = new ValoresAdicional().valorHonra();
 
@@ -122,33 +122,41 @@ public class Apresentacao {
 
 					var pagamento = facade.ValorAPagar(placa, v);
 
-					System.out.println("Valor total R$: "+pagamento);
+					System.out.println("\nValor total R$: "+pagamento);
 					break;
 
 				}
 				case 4: {
-					System.out.println("Informe a placa do seu veiculo!");
+					System.out.println("\nInforme a placa do seu veiculo!");
 					var placa = sc.nextLine();
 
+					
+					
+					if (facade.consultar(facade.dadosVeiculo().placa) == null) {
+						System.out.println("\nveiculo não possue cadastro \n");
+						break;
+					}
+					
+					
 					DadosVeiculo dadosVeiculoAtualizado = new DadosVeiculo();
 					dadosVeiculoAtualizado.cadastrarVeiculo();
 
 
 
 
-					System.out.println("informe os dados do seu veículo");
+					System.out.println("\ninforme os dados do seu veículo");
 
 					facade.Atualizar(placa, dadosVeiculoAtualizado);
 					break;
 				}
 				default:
-					System.out.println("opção invalida\n\n");
+					System.out.println("\nopção "+escolha+" invalida\n\n");
 
 
 
 				}
 			} catch (Exception e) {
-				System.out.println(e.getMessage().valueOf("Caracter inválido!"));;
+				System.out.println(e.getMessage().valueOf("\nCaracter inválido!"));;
 
 			}
 		}

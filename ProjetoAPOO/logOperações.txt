@@ -470,3 +470,258 @@
 2024-08-20 17:14:14 - consulta veiculo
 2024-08-20 17:16:38 - pagamento referete ao veiculo: 10
 2024-08-20 17:16:39 - veiculo placa: 10 removido
+2024-08-20 20:28:26 - consulta veiculo
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:39:32 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:39:32 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:39:32 - CPF: 11180831489 ok!
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:39:32 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:39:32 - CPF: 11180831489 ok!
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:39:32 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:39:32 - CPF: 11180831489 ok!
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Veiculo placa: 10cadastrado
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:39:32 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:39:32 - CPF: 11180831489 ok!
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Veiculo placa: 10cadastrado
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:39:32 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:39:32 - CPF: 11180831489 ok!
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Veiculo placa: 10cadastrado
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:39:32 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:39:32 - CPF: 11180831489 ok!
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Veiculo placa: 10cadastrado
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:40:04 - Estacionamento com vaga para a placa: 20
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:39:32 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:39:32 - CPF: 11180831489 ok!
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Veiculo placa: 10cadastrado
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:40:04 - Estacionamento com vaga para a placa: 20
+2024-08-20 20:40:04 - Veiculo de placa: 20 com ano ok!
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:39:32 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:39:32 - CPF: 11180831489 ok!
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Veiculo placa: 10cadastrado
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:40:04 - Estacionamento com vaga para a placa: 20
+2024-08-20 20:40:04 - Veiculo de placa: 20 com ano ok!
+2024-08-20 20:40:04 - CPF: 11180831489 ok!
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:39:32 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:39:32 - CPF: 11180831489 ok!
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Veiculo placa: 10cadastrado
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:40:04 - Estacionamento com vaga para a placa: 20
+2024-08-20 20:40:04 - Veiculo de placa: 20 com ano ok!
+2024-08-20 20:40:04 - CPF: 11180831489 ok!
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:39:32 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:39:32 - CPF: 11180831489 ok!
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Veiculo placa: 10cadastrado
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:40:04 - Estacionamento com vaga para a placa: 20
+2024-08-20 20:40:04 - Veiculo de placa: 20 com ano ok!
+2024-08-20 20:40:04 - CPF: 11180831489 ok!
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:40:04 - Veiculo placa: 20cadastrado
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:39:32 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:39:32 - CPF: 11180831489 ok!
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Veiculo placa: 10cadastrado
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:40:04 - Estacionamento com vaga para a placa: 20
+2024-08-20 20:40:04 - Veiculo de placa: 20 com ano ok!
+2024-08-20 20:40:04 - CPF: 11180831489 ok!
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:40:04 - Veiculo placa: 20cadastrado
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:39:32 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:39:32 - CPF: 11180831489 ok!
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Veiculo placa: 10cadastrado
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:40:04 - Estacionamento com vaga para a placa: 20
+2024-08-20 20:40:04 - Veiculo de placa: 20 com ano ok!
+2024-08-20 20:40:04 - CPF: 11180831489 ok!
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:40:04 - Veiculo placa: 20cadastrado
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:40:24 - consulta veiculo
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:39:32 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:39:32 - CPF: 11180831489 ok!
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Veiculo placa: 10cadastrado
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:40:04 - Estacionamento com vaga para a placa: 20
+2024-08-20 20:40:04 - Veiculo de placa: 20 com ano ok!
+2024-08-20 20:40:04 - CPF: 11180831489 ok!
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:40:04 - Veiculo placa: 20cadastrado
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:40:24 - consulta veiculo
+2024-08-20 20:40:44 - consulta veiculo
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:39:32 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:39:32 - CPF: 11180831489 ok!
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Veiculo placa: 10cadastrado
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:40:04 - Estacionamento com vaga para a placa: 20
+2024-08-20 20:40:04 - Veiculo de placa: 20 com ano ok!
+2024-08-20 20:40:04 - CPF: 11180831489 ok!
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:40:04 - Veiculo placa: 20cadastrado
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:40:24 - consulta veiculo
+2024-08-20 20:40:44 - consulta veiculo
+2024-08-20 20:41:35 - pagamento referete ao veiculo: 20
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:39:32 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:39:32 - CPF: 11180831489 ok!
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:39:32 - Veiculo placa: 10cadastrado
+2024-08-20 20:39:32 - consulta veiculo
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:40:04 - Estacionamento com vaga para a placa: 20
+2024-08-20 20:40:04 - Veiculo de placa: 20 com ano ok!
+2024-08-20 20:40:04 - CPF: 11180831489 ok!
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:40:04 - Veiculo placa: 20cadastrado
+2024-08-20 20:40:04 - consulta veiculo
+2024-08-20 20:40:24 - consulta veiculo
+2024-08-20 20:40:44 - consulta veiculo
+2024-08-20 20:41:35 - pagamento referete ao veiculo: 20
+2024-08-20 20:41:35 - veiculo placa: 20 removido
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:44:53 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:44:53 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:44:53 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:44:53 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:44:53 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:44:53 - CPF: 11180831489 ok!
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:44:53 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:44:53 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:44:53 - CPF: 11180831489 ok!
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:44:53 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:44:53 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:44:53 - CPF: 11180831489 ok!
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:44:53 - Veiculo placa: 10cadastrado
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:44:53 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:44:53 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:44:53 - CPF: 11180831489 ok!
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:44:53 - Veiculo placa: 10cadastrado
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:44:53 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:44:53 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:44:53 - CPF: 11180831489 ok!
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:44:53 - Veiculo placa: 10cadastrado
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:45:25 - consulta veiculo
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:44:53 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:44:53 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:44:53 - CPF: 11180831489 ok!
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:44:53 - Veiculo placa: 10cadastrado
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:45:25 - consulta veiculo
+2024-08-20 20:45:25 - Estacionamento com vaga para a placa: 30
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:44:53 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:44:53 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:44:53 - CPF: 11180831489 ok!
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:44:53 - Veiculo placa: 10cadastrado
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:45:25 - consulta veiculo
+2024-08-20 20:45:25 - Estacionamento com vaga para a placa: 30
+2024-08-20 20:45:25 - Veiculo de placa: 30 com ano ok!
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:44:53 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:44:53 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:44:53 - CPF: 11180831489 ok!
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:44:53 - Veiculo placa: 10cadastrado
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:45:25 - consulta veiculo
+2024-08-20 20:45:25 - Estacionamento com vaga para a placa: 30
+2024-08-20 20:45:25 - Veiculo de placa: 30 com ano ok!
+2024-08-20 20:45:25 - CPF:  incorreto
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:44:53 - Estacionamento com vaga para a placa: 10
+2024-08-20 20:44:53 - Veiculo de placa: 10 com ano ok!
+2024-08-20 20:44:53 - CPF: 11180831489 ok!
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:44:53 - Veiculo placa: 10cadastrado
+2024-08-20 20:44:53 - consulta veiculo
+2024-08-20 20:45:25 - consulta veiculo
+2024-08-20 20:45:25 - Estacionamento com vaga para a placa: 30
+2024-08-20 20:45:25 - Veiculo de placa: 30 com ano ok!
+2024-08-20 20:45:25 - CPF:  incorreto
+2024-08-20 20:45:25 - consulta veiculo
+2024-08-20 20:51:52 - consulta veiculo
+2024-08-20 20:52:26 - consulta veiculo
+2024-08-20 20:58:19 - consulta veiculo
+2024-08-20 20:58:19 - consulta veiculo
+2024-08-20 20:58:23 - consulta veiculo

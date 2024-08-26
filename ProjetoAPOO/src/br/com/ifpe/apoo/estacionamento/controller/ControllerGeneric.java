@@ -1,12 +1,8 @@
 package br.com.ifpe.apoo.estacionamento.controller;
 
 
-import java.time.Duration;
 import java.time.LocalDateTime;
-
 import br.com.ifpe.apoo.estacionamento.apresentação.DadosVeiculo;
-import br.com.ifpe.apoo.estacionamento.apresentação.ValoresAdicional;
-import br.com.ifpe.apoo.estacionamento.controller.exception.CaracterException;
 import br.com.ifpe.apoo.estacionamento.model.Veiculo;
 import br.com.ifpe.apoo.estacionamento.repository.FactoryDAO;
 import br.com.ifpe.apoo.estacionamento.repository.GenericDAO;

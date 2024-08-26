@@ -16,7 +16,10 @@ public class ValoresAdicional {
 	public double valorHonra() {
 		IPagamento  v = new Pagamento();
 		var valor = v.taxa();
+
+
 		while (true) {
+			try {
 			System.out.println("""
 					\nEscolha os tipos adicionais
 
@@ -27,41 +30,46 @@ public class ValoresAdicional {
 					5 - Concluir/sem adicional\n
 					""");
 			var op = sc.nextLine();
-			var escolha = Integer.parseInt(op);
+			Integer escolha = Integer.parseInt(op);
 
-			if (escolha >= 5) {
-				System.out.println("\nAtendimento finalizado");
-				break;
-			}
-
-			switch (escolha) {
-			case 1: {
-
-				v = new VagaPremium(v);
-				valor = v.taxa();
-				break;
-			}
-			case 2: {
-				v = new ProximoPolo(v);
-				valor = v.taxa();
-				break;
-			}
-			case 3: {
-				v = new VagaCoberta(v);
-				valor = v.taxa();
-				break;
-			}
-			case 4:{
-				
-				v = new VagaSUV(v);
-				valor = v.taxa();
-				break;
-			}
-			default:
-				System.out.println("\nopção "+escolha+" invalida\n\n");
 			
-			}
 
+
+				if (escolha == 5) {
+					System.out.println("\nAtendimento finalizado");
+					break;
+				}
+
+				switch (escolha) {
+				case 1: {
+
+					v = new VagaPremium(v);
+					valor = v.taxa();
+					break;
+				}
+				case 2: {
+					v = new ProximoPolo(v);
+					valor = v.taxa();
+					break;
+				}
+				case 3: {
+					v = new VagaCoberta(v);
+					valor = v.taxa();
+					break;
+				}
+				case 4:{
+
+					v = new VagaSUV(v);
+					valor = v.taxa();
+					break;
+				}
+				default:
+					System.out.println("\nopção "+escolha+" invalida\n\n");
+
+				}
+			} catch (Exception e) {
+				System.out.println(e.getMessage().valueOf("\nCaracter valores adicionais inválido!"));;
+			}
 		}
 
 

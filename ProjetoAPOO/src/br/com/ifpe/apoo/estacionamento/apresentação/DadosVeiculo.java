@@ -1,8 +1,11 @@
 package br.com.ifpe.apoo.estacionamento.apresentação;
 
 
+
 import java.util.Scanner;
-import br.com.ifpe.apoo.estacionamento.model.Veiculo;
+
+
+
 
 public class DadosVeiculo {
 
@@ -25,6 +28,7 @@ public class DadosVeiculo {
 	public void cadastrarVeiculo() {
 
 
+
 		System.out.println("""
 
 				Por favor, escolha o numero de acordo com o tipo do seu veiculo!
@@ -32,12 +36,25 @@ public class DadosVeiculo {
 				1 - Moto
 				2 - Carro
 				""");
-		this.tipoVeiculo = Integer.parseInt( sc.nextLine());
+		var valor = sc.nextLine();
+
+		try {
+
+			Integer tipo = Integer.parseInt(valor);
+			if (tipo == 1 || tipo == 2) {
+				this.tipoVeiculo = tipo;
+				this.dadosVeiculo();
+			}else {
+				System.out.println("\nopção "+tipo+" invalida\n\n");
+				this.cadastrarVeiculo();
+			}
 
 
+		} catch (Exception e) {
+			System.out.println("\nopção "+valor+" invalida\n\n");
+			this.cadastrarVeiculo();
 
-		this.dadosVeiculo();
-
+		}
 
 
 	}

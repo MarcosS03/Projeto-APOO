@@ -21,7 +21,7 @@ public class Apresentacao {
 		while (true) {
 
 			System.out.println("""
-					Olá, informe o numero correspondente ao que você deseja!
+					\nOlá, informe o numero correspondente ao que você deseja!
 
 					1 - Estacionar e cadastrar veículo
 					2 - Consultar veículo estacionado
@@ -38,7 +38,7 @@ public class Apresentacao {
 
 				if (escolha == 5) {
 
-					System.out.println("Atendimento finalizado");
+					System.out.println("\nAtendimento finalizado");
 
 					break;
 				}
@@ -71,7 +71,7 @@ public class Apresentacao {
 						facade.estacionar(moto);
 
 						if (facade.consultar(moto.getPlaca()) == null) {
-							System.out.println("Veiculo não cadastrado, verificar os campos e tente novamente \n");
+							System.out.println("\nVeiculo não cadastrado, verificar os campos e tente novamente \n");
 						}
 
 						break;
@@ -103,7 +103,7 @@ public class Apresentacao {
 
 					var consulta = facade.consultar(placa);
 					if (consulta == null) {
-						System.out.println("Veiculo não encontrado!");
+						System.out.println("Veiculo de placa: "+placa+" não cadastrado  ");
 						break;
 					}
 					System.out.println(consulta);
@@ -115,6 +115,12 @@ public class Apresentacao {
 
 					System.out.println("\nInforme a placa do seu veiculo!");
 					var placa = sc.nextLine();
+					
+					if (facade.consultar(placa) == null) {
+						System.out.println("Veiculo de placa: "+placa+" não cadastrado  ");
+						break;
+					}
+				
 					var valorHora = new ValoresAdicional().valorHonra();
 
 					var s = String.valueOf(valorHora);
@@ -132,8 +138,8 @@ public class Apresentacao {
 
 					
 					
-					if (facade.consultar(facade.dadosVeiculo().placa) == null) {
-						System.out.println("\nveiculo não possue cadastro \n");
+					if (facade.consultar(placa) == null) {
+						System.out.println("\nveiculo de placa: "+ placa+ " não possue cadastro \n");
 						break;
 					}
 					
@@ -142,12 +148,12 @@ public class Apresentacao {
 					dadosVeiculoAtualizado.cadastrarVeiculo();
 
 
-
-
-					System.out.println("\ninforme os dados do seu veículo");
-
 					facade.Atualizar(placa, dadosVeiculoAtualizado);
+					if (facade.consultar(placa) == null) {
+						System.out.println("Veiculo não cadastrado, verificar os campos e tente novamente \n");
+					}
 					break;
+
 				}
 				default:
 					System.out.println("\nopção "+escolha+" invalida\n\n");

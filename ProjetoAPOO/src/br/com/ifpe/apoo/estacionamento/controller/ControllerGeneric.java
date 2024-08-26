@@ -27,9 +27,9 @@ public abstract class ControllerGeneric<T extends Veiculo> implements IControlle
 		this.validarAnoVeiculo(veiculo);
 
 		if (vagaDisponivel() == true) {
-			log.log("Estacionamento com vaga para a placa: "+veiculo.getPlaca());
+			log.log("Estacionamento com vaga para a placa: "+veiculo.getPlaca()+" com ano ok!");
 		}else {
-			log.logErro("Estacionamento sem vaga para a placa: "+veiculo.getPlaca());
+			log.logErro("Estacionamento sem vaga para a placa: "+veiculo.getPlaca()+ " sem vaga!");
 		}
 
 		if (validarAnoVeiculo(veiculo)== true) {

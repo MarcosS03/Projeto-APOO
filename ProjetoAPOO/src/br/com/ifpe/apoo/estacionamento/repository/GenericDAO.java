@@ -57,6 +57,7 @@ public class GenericDAO <T extends Veiculo> implements IGenericDAO<T> {
 		veiculoAntigo.setModelo(dadosVeiculoAtualizado.getModelo());
 		veiculoAntigo.setAnoFabricacao(dadosVeiculoAtualizado.getAnoFabricacao());
 		veiculoAntigo.setPlaca(dadosVeiculoAtualizado.getPlaca());
+		veiculoAntigo.setPlaca(dadosVeiculoAtualizado.getPlaca());
 
 	}
 

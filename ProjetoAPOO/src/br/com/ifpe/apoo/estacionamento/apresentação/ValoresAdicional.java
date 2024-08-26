@@ -68,7 +68,7 @@ public class ValoresAdicional {
 
 				}
 			} catch (Exception e) {
-				System.out.println(e.getMessage().valueOf("\nCaracter valores adicionais inválido!"));;
+				System.out.println(e.getMessage().valueOf("\nCaracter inválido!"));;
 			}
 		}
 

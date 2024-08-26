@@ -144,12 +144,11 @@ public class Apresentacao {
 					}
 					
 					
-					DadosVeiculo dadosVeiculoAtualizado = new DadosVeiculo();
-					dadosVeiculoAtualizado.cadastrarVeiculo();
+					facade.cadastrarVeiculo();
 
 
-					facade.Atualizar(placa, dadosVeiculoAtualizado);
-					if (facade.consultar(placa) == null) {
+					facade.Atualizar(placa, facade.dadosVeiculo);
+					if (facade.consultar(facade.dadosVeiculo.getPlaca()) == null) {
 						System.out.println("Veiculo não cadastrado, verificar os campos e tente novamente \n");
 					}
 					break;
